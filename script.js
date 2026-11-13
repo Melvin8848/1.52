@@ -2,7 +2,7 @@ const form = document.getElementById("form");
 const ny = document.getElementById("ny");
 const lista = document.getElementById("lista");
 
-// Lägg till
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const text = ny.value.trim();
@@ -19,12 +19,11 @@ form.addEventListener("submit", (e) => {
   ny.focus();
 });
 
-// Markera
+
 lista.addEventListener("change", (e) => {
   e.target.closest("li").classList.toggle("klar", e.target.checked);
 });
-
-// Ta bort
+   
 lista.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") e.target.closest("li").remove();
 });
